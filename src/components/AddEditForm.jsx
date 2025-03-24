@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { LuEye, LuEyeOff } from 'react-icons/lu'; // Importa los íconos de react-icons
+import { LuEye, LuEyeOff } from 'react-icons/lu';
 
 function AddEditForm({ submitData, user }) {
 	const [formData, setFormData] = useState({
@@ -11,7 +11,7 @@ function AddEditForm({ submitData, user }) {
 		image_url: '',
 	});
 
-	const [showPassword, setShowPassword] = useState(false); // Estado para mostrar/ocultar la contraseña
+	const [showPassword, setShowPassword] = useState(false);
 
 	useEffect(() => {
 		if (user) {
@@ -35,7 +35,6 @@ function AddEditForm({ submitData, user }) {
 		submitData(formData); // Envía los datos del formulario
 	};
 
-	// Función para alternar entre mostrar y ocultar la contraseña
 	const toggleShowPassword = () => {
 		setShowPassword(!showPassword);
 	};
@@ -75,7 +74,7 @@ function AddEditForm({ submitData, user }) {
 			<label htmlFor="password">Password:</label>
 			<div className="password-input-container">
 				<input
-					type={showPassword ? 'text' : 'password'} // Cambia el tipo de input
+					type={showPassword ? 'text' : 'password'}
 					id="password"
 					name="password"
 					value={formData.password}
@@ -86,8 +85,9 @@ function AddEditForm({ submitData, user }) {
 					type="button" // Importante: type="button" para evitar que envíe el formulario
 					className="password-toggle-button"
 					onClick={toggleShowPassword}
+					aria-label={showPassword ? 'Hide password' : 'Show password'}
 				>
-					{showPassword ? <LuEyeOff /> : <LuEye />} {/* Ícono dinámico */}
+					{showPassword ? <LuEyeOff /> : <LuEye />}
 				</button>
 			</div>
 
