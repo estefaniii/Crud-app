@@ -1,0 +1,287 @@
+/* Estilos generales */
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f4f4f9;
+	margin: 0;
+	padding: 0;
+	color: #333;
+}
+
+/* Título principal */
+.main-title {
+	text-align: center;
+	font-size: 3rem;
+	color: #007bff;
+	margin: 20px 0;
+	cursor: pointer;
+	transition: color 0.3s ease;
+}
+
+.main-title:hover {
+	color: #0056b3;
+}
+
+/* Contenedor principal */
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+	position: relative;
+}
+
+/* Botón de agregar usuario */
+.add-user-button {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+	position: absolute;
+	top: 120px;
+	right: 20px;
+}
+
+.add-user-button:hover {
+	background-color: #0056b3;
+	transform: translateY(-2px);
+}
+
+.add-user-button svg {
+	font-size: 1.2rem;
+}
+
+/* Estilos para el campo de búsqueda */
+.search-container {
+	margin-bottom: 20px;
+	position: relative;
+	width: 50%; /* Reducir el ancho del campo de búsqueda */
+	margin: 100px auto 20px;
+}
+
+.search-input-container {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.search-input-container input {
+	width: 100%;
+	padding: 8px 12px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	font-size: 1rem;
+	transition: border-color 0.3s ease;
+}
+
+.search-input-container input:focus {
+	border-color: #007bff;
+	outline: none;
+}
+
+.search-button {
+	background-color: #007bff;
+	color: white;
+	border: none;
+	padding: 8px 12px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+	background-color: #0056b3;
+}
+
+/* Sugerencias de búsqueda */
+.suggestions-list {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	background-color: white;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	z-index: 1000;
+	margin-top: 5px;
+}
+
+.suggestions-list li {
+	padding: 8px 12px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.suggestions-list li:hover {
+	background-color: #f4f4f9;
+}
+
+/* Mensaje "User not found" */
+.not-found-message {
+	color: #dc3545;
+	text-align: center;
+	margin-top: 10px;
+}
+
+/* Lista de usuarios */
+.users-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	gap: 20px;
+	padding: 20px;
+	margin-top: 20px;
+}
+
+/* Cuadro de usuario */
+.user-card {
+	background-color: white;
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	padding: 25px;
+	text-align: left;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagen del usuario */
+.user-card img {
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	object-fit: cover;
+	margin-bottom: 20px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Nombre del usuario */
+.user-card h2 {
+	font-size: 1.6rem;
+	margin: 0 0 15px;
+	color: #007bff;
+	text-align: center;
+}
+
+/* Información del usuario */
+.user-card p {
+	margin: 10px 0;
+	color: #555;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-size: 1rem;
+}
+
+/* Iconos */
+.user-card p svg {
+	color: #007bff;
+	font-size: 1.2rem;
+}
+
+/* Botones de acción */
+
+.user-actions {
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+	margin-top: 20px;
+}
+
+.user-actions button {
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 14px; /* Redondeamos las esquinas */
+	padding: 8px 14px; /* Añadimos padding */
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+	font-size: 1rem; /* Ajustamos el tamaño de la fuente */
+}
+
+.user-actions button:hover {
+	background-color: #0056b3;
+	transform: translateY(-2px); /* Ligero efecto de elevación */
+}
+
+.user-actions button svg {
+	font-size: 1.2rem;
+	margin-right: 5px; /* Espacio entre el ícono y el texto */
+}
+
+/* Estilos para el botón de añadir usuario */
+.add-user-button {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 10px 20px;
+	background-color: #28a745; /* Color verde para añadir */
+	color: white;
+	border: none;
+	border-radius: 8px; /* Redondeamos las esquinas */
+	font-size: 1rem;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+	position: absolute;
+	top: 120px;
+	right: 20px;
+}
+
+.add-user-button:hover {
+	background-color: #218838;
+	transform: translateY(-2px);
+}
+
+.add-user-button svg {
+	font-size: 1.2rem;
+}
+
+/* Paginación */
+.pagination {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	margin-top: 20px;
+}
+
+.pagination button {
+	padding: 8px 12px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.pagination button:disabled {
+	background-color: #ccc;
+	cursor: not-allowed;
+}
+
+.pagination button:hover:not(:disabled) {
+	background-color: #0056b3;
+}
+
+/* Estilos para el contenedor del campo de contraseña */
+.password-input-container {
+	position: relative;
+	width: 100%; /* Asegura que ocupe todo el ancho disponible */
+}

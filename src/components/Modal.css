@@ -1,0 +1,230 @@
+/* Estilos para el modal */
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+}
+
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1001;
+}
+
+.modal-content {
+	background-color: white;
+	padding: 25px;
+	border-radius: 12px;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+	width: 350px;
+	position: relative;
+	z-index: 1002;
+}
+
+.modal-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.modal-title {
+	font-size: 1.6rem;
+	color: #333;
+	font-weight: 600;
+}
+
+/* Estilos para el botón de cierre */
+.modal-close-button {
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+	font-size: 2rem; /* Tamaño más grande */
+	color: #007bff; /* Color del ícono */
+	transition: color 0.3s ease, transform 0.2s ease;
+	position: absolute;
+	top: 15px; /* Mueve el ícono más arriba */
+	right: 15px; /* Mueve el ícono más a la derecha */
+}
+
+.modal-close-button:hover {
+	color: #0056b3; /* Cambia el color al hacer hover */
+	transform: scale(1.1); /* Efecto de escala al hacer hover */
+}
+
+.modal-close-button svg {
+	vertical-align: middle; /* Alinea el ícono verticalmente */
+}
+
+.modal-body {
+	width: 100%;
+}
+
+.modal-body label {
+	display: block;
+	font-size: 0.9rem;
+	color: #555;
+	margin-bottom: 8px;
+	font-weight: 500;
+}
+
+.modal-body input {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	font-size: 0.9rem;
+	transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modal-body input:focus {
+	border-color: #007bff;
+	outline: none;
+	box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+/* Estilos para el modal de confirmación de eliminación */
+.modal-confirmation-content {
+	background-color: white;
+	padding: 25px;
+	border-radius: 12px;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+	text-align: center;
+}
+
+.modal-confirmation-content p {
+	font-size: 1.1rem;
+	color: #333;
+	margin-bottom: 25px;
+	font-weight: 500;
+}
+
+.modal-confirmation-buttons {
+	display: flex;
+	justify-content: center;
+	gap: 15px; /* Espacio entre los botones */
+}
+
+.modal-confirmation-buttons button {
+	background-color: #007bff; /* Color azul para el botón "Yes" */
+	color: white;
+	border: none;
+	padding: 10px 20px; /* Tamaño más pequeño */
+	border-radius: 8px;
+	cursor: pointer;
+	font-size: 0.9rem;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+	font-weight: 500;
+}
+
+.modal-confirmation-buttons button:last-child {
+	background-color: #dc3545; /* Color rojo para el botón "No" */
+}
+
+.modal-confirmation-buttons button:hover {
+	background-color: #0056b3; /* Efecto hover para el botón "Yes" */
+	transform: translateY(-2px); /* Efecto de elevación */
+}
+
+.modal-confirmation-buttons button:last-child:hover {
+	background-color: #c82333; /* Efecto hover para el botón "No" */
+	transform: translateY(-2px); /* Efecto de elevación */
+}
+
+/* Estilos para el formulario de Add/Edit User */
+.form-container {
+	background-color: white;
+	padding: 20px; /* Menos padding para hacerlo más compacto */
+	border-radius: 20px;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+	display: flex;
+	flex-direction: column;
+	gap: 3px; /* Espacio entre los campos */
+	width: 310px; /* Ancho más pequeño */
+}
+
+.form-container label {
+	font-size: 0.9rem;
+	color: #555;
+	margin-bottom: 5px;
+	font-weight: 500;
+}
+
+.form-container input {
+	width: 100%;
+	padding: 4px; /* Padding más pequeño */
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	font-size: 0.9rem;
+	transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container input:focus {
+	border-color: #007bff;
+	outline: none;
+	box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+.form-container button[type='submit'] {
+	background-color: #28a745; /* Color verde para el botón "Submit" */
+	color: white;
+	border: none;
+	padding: 10px 20px; /* Padding más pequeño */
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+	transition: background-color 0.3s ease, transform 0.2s ease;
+	margin-top: 15px; /* Espacio arriba del botón */
+	font-weight: 500;
+}
+
+.form-container button[type='submit']:hover {
+	background-color: #218838; /* Efecto hover para el botón "Submit" */
+	transform: translateY(-2px); /* Efecto de elevación */
+}
+
+/* Estilos para el campo de contraseña y el botón de mostrar/ocultar */
+.password-input-container {
+	position: relative;
+	width: 100%;
+}
+
+.password-input-container input {
+	width: 100%;
+	padding-right: 5px; /* Espacio para el botón de mostrar/ocultar */
+}
+
+.password-toggle-button {
+	position: absolute;
+	right: 10px; /* Ajusta la posición horizontal */
+	top: 50%;
+	transform: translateY(-50%); /* Centra verticalmente */
+	background: transparent !important; /* Fondo transparente */
+	border: none !important; /* Sin borde */
+	cursor: pointer;
+	color: #007bff; /* Color del ícono */
+	padding: 0 !important; /* Sin padding */
+	font-size: 1.2rem; /* Tamaño del ícono */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 30px; /* Ancho del botón */
+	height: 30px; /* Alto del botón */
+}
+
+.password-toggle-button:hover {
+	color: #0056b3; /* Cambia el color al pasar el mouse */
+	background: transparent !important; /* Fondo transparente al hacer hover */
+}
